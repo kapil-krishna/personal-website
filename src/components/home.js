@@ -1,13 +1,12 @@
 import React from 'react';
 
-function Banner() {
+const Home = () => {
     return (
-        <div className="banner">
+        <section className="home-section">
             <h1>Hey there!</h1>
             <h2>Welcome to my website</h2>
-        </div>
+        </section>
     )
-};
+}
 
-export default Banner;
-
+export default Home;

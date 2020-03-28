@@ -9,7 +9,7 @@ const Header = () => {
     return (
         <header className="header">
               <ToggleButton toggle={toggle} setToggle={setToggle} />
-              <Navbar toggle={toggle}/>
+              <Navbar toggle={toggle} setToggle={setToggle} />
         </header>
     )
 }

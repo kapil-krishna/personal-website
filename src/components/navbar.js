@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link, animateScroll as scroll } from 'react-scroll';
 
 const Navbar = ({ toggle, setToggle }) => {
 
@@ -9,11 +10,44 @@ const Navbar = ({ toggle, setToggle }) => {
     }
 
     return (
-            <nav class={navClass}>
-                <a className="nav-item" href="#" onClick={() => setToggle(!toggle)}>Home</a>
-                <a className="nav-item" href="#about" onClick={() => setToggle(!toggle)}> About</a>
-                <a className="nav-item" href="#projects" onClick={() => setToggle(!toggle)}>Projects</a>
-                <a className="nav-item" href="#contact" onClick={() => setToggle(!toggle)}>Contact</a>
+            <nav class={navClass} id="nav">
+                <Link
+                    className="nav-item"
+                    activeClass="active"
+                    to="home"
+                    spy={true}
+                    smooth={true}
+                    offset={-200}
+                    duration={500}
+                    onClick={() => setToggle(!toggle)}
+                    >HOME</Link>
+                <Link 
+                    className="nav-item"
+                    activeClass="active"
+                    to="about"
+                    spy={true}
+                    smooth={true}
+                    duration={500}
+                    onClick={() => setToggle(!toggle)}
+                    >ABOUT</Link>
+                <Link 
+                    className="nav-item"
+                    activeClass="active"
+                    to="projects"
+                    spy={true}
+                    smooth={true}
+                    duration={500}
+                    onClick={() => setToggle(!toggle)}
+                    >PROJECTS</Link>
+                <Link 
+                    className="nav-item"
+                    activeClass="active"
+                    to="contact"
+                    spy={true}
+                    smooth={true}
+                    duration={500}
+                    onClick={() => setToggle(!toggle)}
+                    >CONTACT</Link>
             </nav>
     )
 }

@@ -16,7 +16,7 @@ const ToggleButton = ({ toggle, setToggle }) => {
     }
 
     return (
-        <button className="toggle-button-open" toggle={toggle} onClick={() => setToggle(!toggle)}>
+        <button className="toggle-button" toggle={toggle} onClick={() => setToggle(!toggle)}>
             <div className={toggleLineTop} />
             <div className={toggleLineMiddle} />
             <div className={toggleLineBottom} />

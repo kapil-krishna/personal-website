@@ -1,4 +1,17 @@
-$background-color-1: rgb(197, 229, 247);
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Russo+One|Sen&display=swap');
+
+$nav-font: 'Sen', sans-serif;
+$nav-hover-color: rgb(27, 190, 49);
+$nav-background-color: rgb(31, 30, 30);
+
+$body-font: 'Montserrat', sans-serif;
+// $button-font:
+// $title-font:
+$banner-font: 'Russo One', sans-serif;
+
+
+$background-color-main: black;
+$background-color-1: rgb(21, 185, 235);
 $background-color-2: rgb(240, 208, 255);
 $background-color-3: rgb(255, 182, 182);
 $background-color-4:  rgb(190, 255, 190);
@@ -8,71 +21,116 @@ $tablet-breakpoint: 768px;
 $desktop-breakpoint: 992px;
 $large-desktop-breakpoint: 1200px; 
 
+$standard-transition: all 0.3s ease;
 
-  body {
-      background-color: $background-color-1;
-    //   overflow: hidden;
-  }
 
-  section {
-    //   temporary
-      min-height: 500px;
-  }
+body {
+    color: white;
+    background-color: $background-color-main;
+//   overflow: hidden;
+}
 
-  .home-section {
-      background-color: $background-color-1;
-  }
+section {
+//   temporary
+    min-height: 500px;
+}
 
-  .about-section {
-      background-color: $background-color-2;
-  }
+h1 {
+    margin: 0;
+}
 
-  .projects-section {
-      background-color: $background-color-3;
-  }
+.home-section {
+    color: $nav-hover-color;
+    height: 90vh;
+    font-family: $banner-font;
+    font-size: 25px;
+    // font-stretch: extra-expanded;
+    text-align: center;
+    // max-width: 800px;
+    // margin: auto;
+    margin-top: 50px;
 
-  .contact-section {
-      background-color: $background-color-4;
-  }
+    h1 {
+        margin: 0.5em;
+    }
+    
+}
 
-  .header {
-      width: 100%;
-      display: flex;
-      justify-content: flex-end;
-  }
-  
-  
-  .navbar { 
+.about-section {
+    background-color: $background-color-2;
+    
+}
+
+.projects-section {
+    background-color: $background-color-3;
+}
+
+.contact-section {
+    background-color: $background-color-4;
+}
+
+.header {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    position: sticky;
+    top: 0;
+}
+
+
+.navbar { 
+    position: sticky;
+    top: 0;
     overflow: hidden;
     opacity: 0;
     visibility: hidden;
     width: 0%;
-  }
-  
-  .navbar-open {
+}
+
+.navbar-open {
     display: flex;
     flex-direction: column;
     position: absolute;
     width: 100%;
-    height: 100%;
+    height: 2000px;
     transition: all 0.5s ease-out;
-    background-color: black;
-    padding-top: 150px;
-    text-align: end;
+    background-color: $nav-background-color;
+    padding-top: 100px;
+    text-align: start;
 
-    @media screen and (min-width: $tablet-breakpoint) {
-        width: 30%;
-        
+
+    @media screen and (min-width: $phone-breakpoint) {
+        width: 40%; 
+    }
+
+    @media screen and (min-width: $desktop-breakpoint) {
+        width: 25%;
     }
 
     .nav-item {
         font-size: 25px;
-        // padding: 20px;
-        // margin-right: 2rem;
-    }
-  }
+        font-weight: 600;
+        font-family: $nav-font;
+        text-decoration: none;
+        margin: 0.5em;
+        margin-left: 2em;
+        color: white;
+        width: 95px;
 
-  @mixin toggle-button {
+        &:hover {
+            transition: $standard-transition;
+            transform: scale(1.05);
+            color: $nav-hover-color;
+        }
+
+        @media screen and (min-width: $desktop-breakpoint) {
+            font-size: 30px;
+            
+        }
+    }
+}
+
+.toggle-button {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -87,29 +145,19 @@ $large-desktop-breakpoint: 1200px;
         .toggle-button-line, 
         .toggle-button-line-top, 
         .toggle-button-line-bottom {
-            background: red;
+            background: $nav-hover-color;
         }
     }
-  }
-
-.toggle-button {
-    @include toggle-button;
 }
-
-.toggle-button-open {
-    @include toggle-button;
-}
-
 
 @mixin toggle-button-line {
     margin: 5px;
-    width: 40px;
+    width: 35px;
     border-radius: 4px;
-    height: 5px;
+    height: 4px;
     background: white;
-    transition: all 0.5s ease;
-    transform-origin: 88% center;
-
+    transition: $standard-transition;
+    transform-origin: 90% center;
 }
 
 .toggle-button-line {

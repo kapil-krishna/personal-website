@@ -8,8 +8,8 @@ const About = () => {
             <div className="about-container">
                 <img src={profilePhoto}/>
                 <div className="about-content">
-                    <h2>"There is a difference between knowing the path and walking the path"</h2>
-                    <p>Hello. I'm Kapil, an aspiring software developer from New Zealand, currently based in London. I've always had a bit of an interest in software engineering, but only recently have I decided to take the leap and try and forge out a career doing something I love. Take a look around and let me know what you think!</p>
+                    <h2>"There's a difference between knowing the path and walking the path"</h2>
+                    <p>How's it going! I'm Kapil, an aspiring software developer from New Zealand, currently based in London. As a tech enthusiast who's always been curious about software engineering, recently I decided to take the leap and try to forge out a career doing something I love. So this is my first attempt at a personal website. Take a look around and let me know what you think!</p>
                     <p>When I'm not involved in tech, you can usually find me playing the guitar or annoying my girlfriend. Two of life's greatest pleasures.</p>
                 </div>
             </div>

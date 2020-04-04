@@ -2,7 +2,7 @@
 
 $nav-font: 'Sen', sans-serif;
 $nav-hover-color: rgb(23, 197, 46);
-$nav-background-color: rgb(19, 41, 19);
+$nav-background-color: rgb(13, 31, 13);
 
 $body-font: 'Baloo 2', cursive;
 // $button-font:
@@ -24,6 +24,8 @@ $desktop-breakpoint: 992px;
 $large-desktop-breakpoint: 1200px; 
 
 $standard-transition: all 0.3s ease;
+
+$paragraph-font-sizing: 1.2rem;
 
 
 body {
@@ -58,6 +60,7 @@ section {
     min-height: 700px;
     max-width: 1200px;
     margin: auto;
+    padding-top: 15px;
     color: $black-background-font;
 
 }
@@ -73,10 +76,15 @@ h1 {
         margin: auto;
         margin-top: 40px;
         border-left: solid 4px;
-        // border-right: solid 4px;
-        // border-bottom: solid 4px;
+        // border-bottom: solid 2px;
     }
 
+@mixin content {
+    padding: 20px 25px 40px;
+    margin: auto;
+    max-width: 650px;
+    font-size: $paragraph-font-sizing;
+}
 
 .home-section {
     color: $nav-hover-color;
@@ -100,18 +108,13 @@ h1 {
         justify-content: space-between;
         margin: auto;
         padding: 50px 10px;
-        // padding-top: 30px;
 
-        @media screen and (min-width: $phone-breakpoint) {
+        @media screen and (min-width: $tablet-breakpoint) {
             flex-flow: row;
         }
 
         .about-content {
-            padding: 40px 25px;
-            padding-top: 20px;
-            margin: auto;
-            font-size: 1.2rem;
-            max-width: 650px;
+           @include content;
 
             @media screen and (min-width: $desktop-breakpoint) {
                 padding: 0px 35px;
@@ -145,6 +148,20 @@ h1 {
 }
 
 .projects-section {
+
+    .javaswitch-container {
+        display: flex;
+        flex-flow: row;
+
+        .left-column {
+            @include content;
+        }
+
+        .right-column {
+            max-height: 400px;
+            max-width: 400px;
+        }
+    }
     // background-image: linear-gradient($background-color-1, $background-color-main);
 }
 

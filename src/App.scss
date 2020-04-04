@@ -1,20 +1,22 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat|Russo+One|Sen&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Baloo+2|Fredoka+One|Montserrat|Russo+One|Sen&display=swap');
 
 $nav-font: 'Sen', sans-serif;
-$nav-hover-color: rgb(27, 190, 49);
-$nav-background-color: rgb(31, 30, 30);
+$nav-hover-color: rgb(28, 221, 54);
+$nav-background-color: rgb(24, 27, 24);
 
-$body-font: 'Montserrat', sans-serif;
+$body-font: 'Baloo 2', cursive;
 // $button-font:
-// $title-font:
+$title-font: 'Fredoka One', cursive;
 $banner-font: 'Russo One', sans-serif;
 
+$black-background-font: white;
+$white-background-font: black;
 
-$background-color-main: black;
-$background-color-1: rgb(21, 185, 235);
-$background-color-2: rgb(240, 208, 255);
-$background-color-3: rgb(255, 182, 182);
-$background-color-4:  rgb(190, 255, 190);
+$background-color-main: rgb(0, 0, 0);
+$background-color-1: rgb(40, 199, 34);
+$background-color-2: rgb(37, 39, 36);
+$background-color-3: rgb(37, 189, 209);
+$background-color-4:  rgb(116, 117, 116);
 
 $phone-breakpoint: 576px;
 $tablet-breakpoint: 768px;
@@ -25,14 +27,31 @@ $standard-transition: all 0.3s ease;
 
 
 body {
-    color: white;
+    // color: $nav-hover-color;
     background-color: $background-color-main;
+    font-family: $body-font;
 //   overflow: hidden;
+}
+
+footer {
+    color: white;
+    min-height: 300px;
+    text-align: center;
 }
 
 section {
 //   temporary
-    min-height: 500px;
+    min-height: 700px;
+    color: $white-background-font;
+
+    h1 {
+        color: $black-background-font;
+        font-family: $nav-font;
+        font-size: 2.5em;
+        text-align: center;
+        padding: 30px 0px;
+        // border-bottom: solid 2px;
+    }
 }
 
 h1 {
@@ -42,12 +61,7 @@ h1 {
 .home-section {
     color: $nav-hover-color;
     height: 90vh;
-    font-family: $banner-font;
-    font-size: 25px;
-    // font-stretch: extra-expanded;
     text-align: center;
-    // max-width: 800px;
-    // margin: auto;
     margin-top: 50px;
 
     h1 {
@@ -56,17 +70,67 @@ h1 {
     
 }
 
-.about-section {
+@mixin blackSection {
+    color: $black-background-font;
     background-color: $background-color-2;
+}
+
+.about-section {
+    @include blackSection;
+
+    .about-container {
+        display: flex;
+        flex-flow: column;
+        justify-content: space-evenly;
+        max-width: 1000px;
+        margin: auto;
+        padding: 50px 10px;
+        // padding-top: 30px;
+
+        @media screen and (min-width: $phone-breakpoint) {
+            flex-flow: row;
+        }
+
+        .about-content {
+            padding: 40px 25px;
+            padding-top: 20px;
+            font-size: 1.2rem;
+
+            @media screen and (min-width: $desktop-breakpoint) {
+                padding: 0px 35px;
+                
+            }
+
+            h2 {
+                margin-top: 0;
+                text-align: center;
+            }
+
+            p {
+                text-align: justify;
+            }
+        }
+    }
+
+    img {
+        border: solid $black-background-font 4px;
+        border-radius: 3px;
+        margin: auto;
+        max-width: 260px;
+
+        @media screen and (min-width: $desktop-breakpoint) {
+            margin-top: 0;
+        }
+    }
     
 }
 
 .projects-section {
-    background-color: $background-color-3;
+    background-color: $background-color-1;
 }
 
 .contact-section {
-    background-color: $background-color-4;
+    @include blackSection;
 }
 
 .header {
@@ -153,6 +217,7 @@ h1 {
 @mixin toggle-button-line {
     margin: 5px;
     width: 35px;
+    // border: solid black 3px;
     border-radius: 4px;
     height: 4px;
     background: white;

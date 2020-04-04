@@ -13,7 +13,7 @@ $black-background-font: white;
 $white-background-font: black;
 
 $background-color-main: rgb(0, 0, 0);
-$background-color-1: rgb(32, 175, 3);
+$background-color-1: rgb(42, 148, 16);
 $background-color-2: rgb(25, 56, 16);
 $background-color-3: rgb(37, 189, 209);
 $background-color-4:  rgb(116, 117, 116);
@@ -72,13 +72,13 @@ h1 {
     
 }
 
-@mixin blackSection {
+@mixin coloredSection {
     color: $black-background-font;
-    background-color: $background-color-2;
+    background-color: $background-color-1;
 }
 
 .about-section {
-    @include blackSection;
+    @include coloredSection;
 
     .about-container {
         display: flex;
@@ -132,11 +132,11 @@ h1 {
 }
 
 .projects-section {
-    background-color: $background-color-1;
+    // background-color: $background-color-1;
 }
 
 .contact-section {
-    @include blackSection;
+    @include coloredSection;
 }
 
 .header {

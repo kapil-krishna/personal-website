@@ -36,6 +36,7 @@ $paragraph-font-sizing: 1.2rem;
 
 
 body {
+    color: white;
     background-color: $background-color-main;
     font-family: $body-font;
 }
@@ -46,13 +47,13 @@ header {
     justify-content: flex-end;
     position: sticky;
     top: 0;
+    // background-color: $background-color-3;
 }
 
 footer {
-    color: white;
     min-height: 300px;
     text-align: center;
-    // background-color: $background-color-3;
+    background-color: $background-color-3;
     background-image: linear-gradient($background-color-main, $background-color-1);
 
     h4 {
@@ -80,7 +81,7 @@ footer {
 section {
     margin: auto 10px;
     padding-top: 15px;
-    color: $black-background-font;
+    max-width: 1600px;
 
     @media screen and (min-width: $phone-breakpoint) {
         margin: auto 20px;
@@ -170,7 +171,6 @@ h1 {
 }
 
 .about-section {
-    max-width: 1600px;
 
     .about-container {
         @include container;
@@ -201,7 +201,7 @@ h1 {
     }
 
     img {
-        border: solid $colored-background-font 4px;
+        border: solid $colored-background-font 6px;
         border-radius: 3px;
         margin: auto;
         max-width: 260px;
@@ -214,7 +214,6 @@ h1 {
 }
 
 .projects-section {
-    max-width: 1600px;
 
     h2 {
         text-align: center;
@@ -260,6 +259,49 @@ h1 {
                 }
             }
         } 
+    }
+}
+
+.contact-section {
+    .contact-container {
+        @include container;
+
+        h2 {
+            text-align: center;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            flex-grow: 1;
+            justify-content: space-between;
+            margin: auto;
+
+            @media screen and (min-width: $tablet-breakpoint) {
+                flex-direction: row;
+                max-width: 750px;
+            }
+
+            field {
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                // max-width: 350px;
+                height: 76px;
+                text-align: left;
+                margin-bottom: 10px;
+            
+                @media screen and (min-width: $tablet-breakpoint) {
+                    // width: 40%;
+                    max-width: 345px;
+                }
+            
+                @media screen and (min-width: $desktop-breakpoint) {
+                    // margin: none;
+                }
+            }
+        }
     }
 }
 

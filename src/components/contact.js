@@ -4,13 +4,6 @@ import React, {useState} from 'react';
 const Contact = () => {
     return (
         <section className="contact-section" id="contact">
-
-            <form name="contact" netlify netlify-honeypot="bot-field" hidden>
-                <input type="text" name="name" />
-                <input type="email" name="email" />
-                <textarea name="message"></textarea>
-            </form>
-
             <h1>CONTACT</h1>
             <div className="contact-container">
                 <h2>Feel free to drop me a line below!</h2>

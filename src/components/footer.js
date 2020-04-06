@@ -18,7 +18,7 @@ const Footer = () => {
                 </a>
             </div>
             <h4 className="copyright">
-                Copyright © 2020 Kapil Krishna.
+                Copyright © 2020 Kapil Krishna. All rights reserved.
             </h4>
         </footer>
     )

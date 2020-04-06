@@ -5,12 +5,12 @@ $nav-hover-color: rgb(26, 206, 50);
 $nav-background-color: rgb(25, 32, 27);
 
 $body-font: 'Baloo 2', cursive;
-// $button-font:
 $title-font: 'Fredoka One', cursive;
 $banner-font: 'Russo One', sans-serif;
 
-$colored-background-font: rgb(252, 252, 252);
-$black-background-font: rgb(255, 255, 255);
+$paragraph-font-sizing: 1.2rem;
+
+$font-color-main: rgb(255, 255, 255);
 
 $background-color-main: rgb(0, 0, 0);
 $background-color-1: rgb(42, 148, 16);
@@ -23,17 +23,18 @@ $desktop-breakpoint: 992px;
 $large-desktop-breakpoint: 1200px; 
 
 $standard-transition: all 0.3s ease;
+$standard-border-radius: 3px;
 
 @mixin hoverAnimate {
 
     &:hover {
-        opacity: 0.6;
+        transform: scale(1.05);
+        opacity: 0.7;
         transition: all 0.5s ease;
+        z-index: 0;
+        position: relative;
     }
 }
-
-$paragraph-font-sizing: 1.2rem;
-
 
 body {
     color: white;
@@ -47,7 +48,109 @@ header {
     justify-content: flex-end;
     position: sticky;
     top: 0;
-    // background-color: $background-color-3;
+}
+
+.navbar { 
+    position: sticky;
+    top: 0;
+    overflow: hidden;
+    opacity: 0;
+    visibility: hidden;
+    width: 0%;
+}
+
+.navbar-open {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    width: 100%;
+    height: 2000px;
+    transition: all 0.5s ease-out;
+    background-color: $nav-background-color;
+    padding-top: 100px;
+    text-align: start;
+    z-index: 2;
+
+
+    @media screen and (min-width: $phone-breakpoint) {
+        width: 40%; 
+    }
+
+    @media screen and (min-width: $desktop-breakpoint) {
+        width: 25%;
+    }
+
+    .nav-item {
+        font-size: 25px;
+        font-weight: 600;
+        font-family: $nav-font;
+        text-decoration: none;
+        margin: 0.5em;
+        margin-left: 2em;
+        color: $font-color-main;
+        width: 95px;
+
+        &:hover {
+            transition: $standard-transition;
+            transform: scale(1.05);
+            color: $nav-hover-color;
+        }
+
+        @media screen and (min-width: $desktop-breakpoint) {
+            font-size: 30px;
+            
+        }
+    }
+}
+
+.toggle-button {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    outline: none;
+    background: transparent;
+    border: none;
+    padding: 26px;
+    z-index: 3;
+    cursor: pointer;
+
+    &:hover {
+        .toggle-button-line, 
+        .toggle-button-line-top, 
+        .toggle-button-line-bottom {
+            background: $nav-hover-color;
+        }
+    }
+}
+
+@mixin toggle-button-line {
+    margin: 5px;
+    width: 35px;
+    // border: solid black 3px;
+    border-radius: 4px;
+    height: 4px;
+    background: white;
+    transition: $standard-transition;
+    transform-origin: 90% center;
+}
+
+.toggle-button-line {
+    @include toggle-button-line;
+}
+
+.toggle-button-line-top {
+    @include toggle-button-line;
+    transform: rotate(-45deg) scale(1.4);
+}
+
+.toggle-button-line-middle { 
+    @include toggle-button-line;
+    background: transparent;
+}
+
+.toggle-button-line-bottom {
+    @include toggle-button-line;
+    transform: rotate(45deg) scale(1.4);
 }
 
 footer {
@@ -58,7 +161,7 @@ footer {
 
     h4 {
         padding-top: 20px;
-        font-size: 20px;
+        font-size: 15px;
     }
 
     .svgBox {
@@ -102,24 +205,7 @@ section {
 
 }
 
-.svgBox {
-    display: flex;
-    justify-content: space-evenly;
-
-    a {
-        max-height: 100px;
-        max-width: 25%;
-
-        img {
-            @include hoverAnimate;
-            height: 100%;
-            width: 100%;
-        }
-    }
-}
-
 h1 {
-        color: $colored-background-font;
         font-family: $nav-font;
         font-size: 2.5em;
         text-align: center;
@@ -138,6 +224,19 @@ h1 {
     font-size: $paragraph-font-sizing;
 }
 
+@mixin container {
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    margin: auto;
+    padding: 50px 10px;
+    background-color: $background-color-3;
+
+    h3 {
+        text-align: center;
+    }
+}
+
 .home-section {
     color: $nav-hover-color;
     text-transform: uppercase;
@@ -151,23 +250,6 @@ h1 {
         border: none;
     }
     
-}
-
-@mixin container {
-    display: flex;
-    flex-flow: column;
-    justify-content: space-between;
-    margin: auto;
-    padding: 50px 10px;
-    background-color: $background-color-3;
-
-    h3 {
-        text-align: center;
-    }
-
-    .technologies {
-        // padding-top: 10px;
-    }
 }
 
 .about-section {
@@ -201,8 +283,8 @@ h1 {
     }
 
     img {
-        border: solid $colored-background-font 6px;
-        border-radius: 3px;
+        border: solid $font-color-main 6px;
+        border-radius: $standard-border-radius;
         margin: auto;
         max-width: 260px;
 
@@ -241,7 +323,7 @@ h1 {
                 @include hoverAnimate;
     
                 .images-top-row {
-                    background-image: url('./images/javaswitch/main-page.PNG')
+                    background-image: url('./images/javaswitch/main-page.PNG');
                 }
     
                 .images-bottom-row {
@@ -262,6 +344,8 @@ h1 {
     }
 }
 
+
+
 .contact-section {
     .contact-container {
         @include container;
@@ -273,13 +357,14 @@ h1 {
         form {
             display: flex;
             flex-direction: column;
-            flex-wrap: wrap;
-            flex-grow: 1;
-            justify-content: space-between;
+            font-size: $paragraph-font-sizing;
+            width: 90%;
+            max-width: 350px;
             margin: auto;
 
             @media screen and (min-width: $tablet-breakpoint) {
-                flex-direction: row;
+                flex-flow: row wrap;
+                justify-content: space-between;
                 max-width: 750px;
             }
 
@@ -287,26 +372,81 @@ h1 {
                 display: flex;
                 flex-direction: column;
                 width: 100%;
-                // max-width: 350px;
-                height: 76px;
+                max-width: 350px;
                 text-align: left;
                 margin-bottom: 10px;
-            
-                @media screen and (min-width: $tablet-breakpoint) {
-                    // width: 40%;
-                    max-width: 345px;
+
+                
+                input, textarea {
+                    font-size: $paragraph-font-sizing;
+                    font-family: $body-font;
+                    border: solid white 3px;
+                    box-sizing: border-box;
+                    outline: none;
+                    // border-radius: $standard-border-radius;
+
+                    &:focus {
+                        border-color: $nav-hover-color;
+                    }
                 }
-            
-                @media screen and (min-width: $desktop-breakpoint) {
-                    // margin: none;
+
+                textarea {
+                    max-width: unset;
+                    width: 100%;
                 }
             }
+
+            .message-input {
+                max-width: unset;
+            }
+
+            .submit-button {
+                font-size: $paragraph-font-sizing + 0.3;
+                font-family: $body-font;
+                font-weight: 900;
+                text-transform: uppercase;
+                height: 60px;
+                width: 80%;
+                max-width: 250px;
+                margin: 20px auto;
+                border: solid white 4px;
+                border-radius: $standard-border-radius;
+                opacity: 1 !important;
+                color: $font-color-main;
+                background-color: $background-color-1;
+
+                &:hover {
+                    @include hoverAnimate;
+                    background-color: $nav-hover-color;
+                
+                    cursor: pointer;
+                }
+
+            }
+
+        }
+    }
+}
+
+.svgBox {
+    display: flex;
+    justify-content: space-evenly;
+
+    a {
+        max-height: 100px;
+        max-width: 25%;
+
+        img {
+            @include hoverAnimate;
+            height: 100%;
+            width: 100%;
         }
     }
 }
 
 @mixin imageConstants {
     border: solid white 2px;
+    // border-radius: $standard-border-radius;
     background-position: top;  
     background-size: cover;
     box-sizing: border-box;
@@ -321,7 +461,11 @@ $max-height-second-row: 400px;
     max-width: 650px;
     height: 550px;
     margin: auto;
-    padding: 20px;
+    z-index: 1;
+
+    @media screen and (min-width: $desktop-breakpoint) {
+        padding: 20px;
+    }
 
     .images-top-row {
         @include imageConstants;
@@ -371,110 +515,4 @@ $max-height-second-row: 400px;
     }
 }
 
-.contact-section {
-
-}
-
-
-.navbar { 
-    position: sticky;
-    top: 0;
-    overflow: hidden;
-    opacity: 0;
-    visibility: hidden;
-    width: 0%;
-}
-
-.navbar-open {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    width: 100%;
-    height: 2000px;
-    transition: all 0.5s ease-out;
-    background-color: $nav-background-color;
-    padding-top: 100px;
-    text-align: start;
-
-
-    @media screen and (min-width: $phone-breakpoint) {
-        width: 40%; 
-    }
-
-    @media screen and (min-width: $desktop-breakpoint) {
-        width: 25%;
-    }
-
-    .nav-item {
-        font-size: 25px;
-        font-weight: 600;
-        font-family: $nav-font;
-        text-decoration: none;
-        margin: 0.5em;
-        margin-left: 2em;
-        color: white;
-        width: 95px;
-
-        &:hover {
-            transition: $standard-transition;
-            transform: scale(1.05);
-            color: $nav-hover-color;
-        }
-
-        @media screen and (min-width: $desktop-breakpoint) {
-            font-size: 30px;
-            
-        }
-    }
-}
-
-.toggle-button {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    outline: none;
-    background: transparent;
-    border: none;
-    padding: 26px;
-    z-index: 1;
-    cursor: pointer;
-
-    &:hover {
-        .toggle-button-line, 
-        .toggle-button-line-top, 
-        .toggle-button-line-bottom {
-            background: $nav-hover-color;
-        }
-    }
-}
-
-@mixin toggle-button-line {
-    margin: 5px;
-    width: 35px;
-    // border: solid black 3px;
-    border-radius: 4px;
-    height: 4px;
-    background: white;
-    transition: $standard-transition;
-    transform-origin: 90% center;
-}
-
-.toggle-button-line {
-    @include toggle-button-line;
-}
-
-.toggle-button-line-top {
-    @include toggle-button-line;
-    transform: rotate(-45deg) scale(1.4);
-}
-
-.toggle-button-line-middle { 
-    @include toggle-button-line;
-    background: transparent;
-}
-
-.toggle-button-line-bottom {
-    @include toggle-button-line;
-    transform: rotate(45deg) scale(1.4);
-}
 

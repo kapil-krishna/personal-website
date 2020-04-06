@@ -18,19 +18,19 @@ const Contact = () => {
                     </field>
                     <field>
                         <label>Email</label>
-                        <input 
+                        <input
                             name="email" 
                             type="email" 
                         />
                     </field>
-                    <field>
+                    <field className="message-input">
                         <label>Message</label>
                         <textarea 
                             name="message" 
                             rows="8"
                         />
                     </field>
-                    <input className="submitButton" type="submit" value="Submit"/>
+                    <input className="submit-button" type="submit" value="send"/>
                 </form>
             </div>
         </section>

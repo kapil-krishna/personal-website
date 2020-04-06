@@ -17,13 +17,22 @@ const Javaswitch = () => {
                 <div className="technologies">
                     <h3>Technologies used</h3>
                     <div className="svgBox">
-                        <img src={ReactSVG}/>
-                        <img src={GatsbySVG}/>
-                        <img src={NetlifySVG}/>
+                        <a href="https://reactjs.org/" target="_blank">
+                            <img src={ReactSVG}/>
+                        </a>
+                        <a href="https://www.gatsbyjs.org/" target="_blank">
+                            <img src={GatsbySVG}/>
+                        </a>
+                        <a href="https://www.netlify.com/" target="_blank">
+                            <img src={NetlifySVG}/>
+                        </a>
                     </div>
                 </div>
             </div>
-            <TwoRowPhotoGrid/>
+            <a className="photoGrid" href="https://javaswitch.netlify.com/" target="_blank">
+                <TwoRowPhotoGrid/>
+            </a>
+            
         </div>
     )
 }

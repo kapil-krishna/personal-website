@@ -1,42 +1,29 @@
 import React from 'react';
-import Gallery from 'react-photo-gallery';
-import appForm from '../../images/javaswitch/app-form.PNG';
-import mainPage from '../../images/javaswitch/main-page.PNG';
-import mobileView from '../../images/javaswitch/mobile-view.PNG';
-import modal from '../../images/javaswitch/modal.PNG';
+import ReactSVG from '../../images/SVGs/react-2.svg';
+import GatsbySVG from '../../images/SVGs/Gatsby-Monogram.svg';
+import NetlifySVG from '../../images/SVGs/netlify.svg';
+import TwoRowPhotoGrid from '../photoGrid';
 
 const Javaswitch = () => {
-
-    const images = [
-        {
-            src: appForm,
-        },
-        {
-            src: mainPage
-        },
-        {
-            src: mobileView
-        },
-        {
-            src: modal
-        }
-    ];
-    
     return (
         <div className="javaswitch-container">
             <div className="left-column">
+                <h2 className="javaswitch-heading">Javaswitch</h2>
                 <div className="javaswitch-description">
-                    <p>After completing the TechSwitch bootcamp, I was given the task of designing a website for a company that offered software engineering bootcamps. The main point of the assignment was to get used to using Gatsby.js and creating static web pages.</p>
+                    <p>As a post-programme assignment after finishing the TechSwitch bootcamp, I was given the task of designing a website for a company that offered software engineering bootcamps. 
+                        The website needed to be modern, responsive and modifiable via a CMS. 
+                        To achieve this I combined Gatsby.js, a static-site generator, with Netlify CMS, allowing the site to be editable for non-developers as well as having other features such as image optimisation.</p>
                 </div>
-                <div className="javaswitch-technologies">
-                    <p>Gatsby.js, React.js, Netlify</p>
+                <div className="technologies">
+                    <h3>Technologies used</h3>
+                    <div className="svgBox">
+                        <img src={ReactSVG}/>
+                        <img src={GatsbySVG}/>
+                        <img src={NetlifySVG}/>
+                    </div>
                 </div>
             </div>
-            <div className="right-column">
-                <div className="javaswitch-images">
-                    <Gallery photos={images}/>
-                </div>
-            </div>
+            <TwoRowPhotoGrid/>
         </div>
     )
 }

@@ -6,7 +6,9 @@ const Projects = () => {
     return (
         <section className="projects-section" id="projects">
             <h1>PROJECTS</h1>
-            <Javaswitch />
+                <Javaswitch />
+                <h2>More to come!</h2>
+
         </section>
     )
 }

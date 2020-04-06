@@ -344,7 +344,8 @@ h1 {
     }
 }
 
-
+ $form-color: rgb(33, 199, 163);
+ $form-animate-color:  rgb(33, 199, 130);
 
 .contact-section {
     .contact-container {
@@ -383,10 +384,13 @@ h1 {
                     border: solid white 3px;
                     box-sizing: border-box;
                     outline: none;
+                    box-shadow: 3px 3px grey;
                     // border-radius: $standard-border-radius;
 
                     &:focus {
-                        border-color: $nav-hover-color;
+                        transition: 0.5s;
+                        box-shadow: 3px 3px $form-animate-color;
+                        
                     }
                 }
 
@@ -398,7 +402,7 @@ h1 {
 
             .message-input {
                 max-width: unset;
-            }
+            }  
 
             .submit-button {
                 font-size: $paragraph-font-sizing + 0.3;
@@ -413,11 +417,11 @@ h1 {
                 border-radius: $standard-border-radius;
                 opacity: 1 !important;
                 color: $font-color-main;
-                background-color: $background-color-1;
+                background-color: $form-color;
 
                 &:hover {
                     @include hoverAnimate;
-                    background-color: $nav-hover-color;
+                    background-color: rgb(34, 204, 125);
                 
                     cursor: pointer;
                 }

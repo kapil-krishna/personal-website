@@ -29,7 +29,7 @@ $standard-border-radius: 3px;
 
     &:hover {
         transform: scale(1.05);
-        // opacity: 0.8;
+        // opacity: 0.7;
         transition: all 0.5s ease;
         z-index: 0;
         position: relative;
@@ -47,7 +47,9 @@ header {
     display: flex;
     justify-content: flex-end;
     position: sticky;
-    top: 0;
+    top:0;
+    z-index: 1;
+
 }
 
 .navbar { 
@@ -69,7 +71,7 @@ header {
     background-color: $nav-background-color;
     padding-top: 100px;
     text-align: start;
-    z-index: 2;
+    // z-index: 2;
 
 
     @media screen and (min-width: $phone-breakpoint) {
@@ -344,6 +346,7 @@ h1 {
 }
 
  $form-color: rgb(33, 199, 163);
+ $form-background-color: rgb(218, 218, 218);
 
 .contact-section {
     .contact-container {
@@ -379,15 +382,17 @@ h1 {
                 input, textarea {
                     font-size: $paragraph-font-sizing;
                     font-family: $body-font;
-                    border: solid white 3px;
+                    border: solid  $form-background-color 3px;
                     box-sizing: border-box;
                     outline: none;
                     box-shadow: 3px 3px grey;
-                    // border-radius: $standard-border-radius;
+                    background-color: $form-background-color;
 
                     &:focus {
                         transition: 0.5s;
                         box-shadow: 3px 3px $form-color;
+                        border: solid  white 3px;
+                        background-color: white;
                         
                     }
                 }

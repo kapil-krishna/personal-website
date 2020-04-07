@@ -28,10 +28,13 @@ const Javaswitch = () => {
                         </a>
                     </div>
                 </div>
+                <a className="demo-button" href="https://javaswitch.netlify.com/" target="_blank">
+                    Demo 
+                </a>
             </div>
-            <a className="photoGrid" href="https://javaswitch.netlify.com/" target="_blank">
+            {/* <a className="photoGrid" href="https://javaswitch.netlify.com/" target="_blank"> */}
                 <TwoRowPhotoGrid/>
-            </a>
+            {/* </a> */}
             
         </div>
     )

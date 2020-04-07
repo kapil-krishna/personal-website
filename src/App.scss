@@ -23,6 +23,7 @@ $desktop-breakpoint: 992px;
 $large-desktop-breakpoint: 1200px; 
 
 $standard-transition: all 0.3s ease;
+$standard-border: solid white 4px;
 $standard-border-radius: 3px;
 
 @mixin hoverAnimate {
@@ -31,8 +32,6 @@ $standard-border-radius: 3px;
         transform: scale(1.05);
         // opacity: 0.7;
         transition: all 0.5s ease;
-        z-index: 0;
-        position: relative;
     }
 }
 
@@ -71,7 +70,6 @@ header {
     background-color: $nav-background-color;
     padding-top: 100px;
     text-align: start;
-    // z-index: 2;
 
 
     @media screen and (min-width: $phone-breakpoint) {
@@ -113,7 +111,7 @@ header {
     background: transparent;
     border: none;
     padding: 26px;
-    z-index: 3;
+    z-index: 2;
     cursor: pointer;
 
     &:hover {
@@ -128,7 +126,6 @@ header {
 @mixin toggle-button-line {
     margin: 5px;
     width: 35px;
-    // border: solid black 3px;
     border-radius: 4px;
     height: 4px;
     background: white;
@@ -212,15 +209,13 @@ h1 {
         font-size: 2.5em;
         text-align: center;
         padding: 10px 20px;
-        // padding-top: 0px;
         width: fit-content;
         margin: 40px auto;
-        border-left: solid 4px;
-        // border-bottom: solid 2px;
+        border-left: $standard-border;
     }
 
 @mixin content {
-    padding: 20px 25px 40px;
+    padding: 20px 20px 40px;
     margin: auto;
     max-width: 650px;
     font-size: $paragraph-font-sizing;
@@ -284,7 +279,7 @@ h1 {
     }
 
     img {
-        border: solid $font-color-main 6px;
+        border: $standard-border;
         border-radius: $standard-border-radius;
         margin: auto;
         max-width: 260px;
@@ -313,15 +308,32 @@ h1 {
 
         .left-column {
             @include content;
+            display: flex;
+            flex-flow: column;
             text-align: justify;
+
+            .demo-button {
+                font-size: 25px;
+                text-decoration: none;
+                text-align: center;
+                width: fit-content;
+                margin: 60px auto 40px;
+                // margin-top: 80px;
+                padding: 10px 80px;
+                color: $font-color-main;
+                background-color: rgb(199, 43, 121);
+                border: $standard-border;
+                border-radius: $standard-border-radius;
+                @include hoverAnimate;
+            }
 
         }
 
-        .photoGrid {
+        // .photoGrid {
             margin: auto;
 
             .two-row-grid {
-                @include hoverAnimate;
+                // @include hoverAnimate;
     
                 .images-top-row {
                     background-image: url('./images/javaswitch/main-page.PNG');
@@ -341,7 +353,7 @@ h1 {
                     }
                 }
             }
-        } 
+        // } 
     }
 }
 
@@ -382,7 +394,7 @@ h1 {
                 input, textarea {
                     font-size: $paragraph-font-sizing;
                     font-family: $body-font;
-                    border: solid  $form-background-color 3px;
+                    border: solid  $form-background-color 4px;
                     box-sizing: border-box;
                     outline: none;
                     box-shadow: 3px 3px grey;
@@ -391,7 +403,7 @@ h1 {
                     &:focus {
                         transition: 0.5s;
                         box-shadow: 3px 3px $form-color;
-                        border: solid  white 3px;
+                        border: $standard-border;
                         background-color: white;
                         
                     }
@@ -416,7 +428,7 @@ h1 {
                 width: 80%;
                 max-width: 250px;
                 margin: 20px auto;
-                border: solid white 4px;
+                border: $standard-border;
                 border-radius: $standard-border-radius;
                 opacity: 1 !important;
                 color: $font-color-main;
@@ -424,7 +436,7 @@ h1 {
 
                 &:hover {
                     @include hoverAnimate;
-                    background-color: $nav-hover-color;
+                    // background-color: $nav-hover-color;
                 
                     cursor: pointer;
                 }
@@ -452,8 +464,8 @@ h1 {
 }
 
 @mixin imageConstants {
-    border: solid white 2px;
-    // border-radius: $standard-border-radius;
+    border: $standard-border;
+    border-width: 2px;
     background-position: top;  
     background-size: cover;
     box-sizing: border-box;
@@ -468,8 +480,7 @@ $max-height-second-row: 400px;
     max-width: 650px;
     height: 550px;
     margin: auto;
-    z-index: 1;
-
+    
     @media screen and (min-width: $desktop-breakpoint) {
         padding: 20px;
     }

@@ -1,8 +1,9 @@
 import React from 'react';
-import Javaswitch from './projects/javaswitch';
+import Javaswitch from './individual-projects/javaswitch/javaswitch';
+import './allProjects.scss';
 
 
-const Projects = () => {
+const AllProjects = () => {
     return (
         <section className="projects-section" id="projects">
             <h1>PROJECTS</h1>
@@ -12,4 +13,4 @@ const Projects = () => {
     )
 }
 
-export default Projects;
+export default AllProjects;

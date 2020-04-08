@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
-import ToggleButton from './toggleButton';
-import Navbar from './navbar';
+import ToggleButton from './toggle-button/toggleButton';
+import Navbar from './navbar/navbar';
+import './header.scss';
 
 const Header = () => {
 

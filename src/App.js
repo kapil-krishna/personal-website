@@ -1,11 +1,11 @@
 import React from 'react';
 import './App.scss';
-import Header from './components/header';
-import Projects from './components/projects';
-import About from './components/about';
-import Home from './components/home';
-import Contact from './components/contact';
-import Footer from './components/footer';
+import Header from './components/header/header';
+import AllProjects from './components/all-projects/allProjects';
+import About from './components/about/about';
+import Home from './components/home/home';
+import Contact from './components/contact/contact';
+import Footer from './components/footer/footer';
 
 function App() {
   return (
@@ -13,7 +13,7 @@ function App() {
       <Header />
       <Home />
       <About />
-      <Projects />
+      <AllProjects />
       <Contact />
       <Footer />
     </div>

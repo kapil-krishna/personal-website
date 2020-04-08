@@ -1,0 +1,88 @@
+@import '../general-styling.scss';
+
+.contact-section {
+
+    .contact-container {
+        @include container;
+
+        h2 {
+            text-align: center;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            font-size: $paragraph-font-sizing;
+            width: 90%;
+            max-width: 350px;
+            margin: auto;
+
+            @media screen and (min-width: $tablet-breakpoint) {
+                flex-flow: row wrap;
+                justify-content: space-between;
+                max-width: 750px;
+            }
+
+            field {
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                max-width: 350px;
+                text-align: left;
+                margin-bottom: 10px;
+
+                
+                input, textarea {
+                    font-size: $paragraph-font-sizing;
+                    font-family: $body-font;
+                    border: solid  $form-background-color 4px;
+                    box-sizing: border-box;
+                    outline: none;
+                    box-shadow: 3px 3px grey;
+                    background-color: $form-background-color;
+
+                    &:focus {
+                        transition: 0.3s;
+                        box-shadow: 3px 3px $form-color;
+                        border: $standard-border;
+                        background-color: white;
+                        
+                    }
+                }
+
+                textarea {
+                    max-width: unset;
+                    width: 100%;
+                }
+            }
+
+            .message-input {
+                max-width: unset;
+            }  
+
+            .submit-button {
+                font-size: $paragraph-font-sizing + 0.3;
+                font-family: $body-font;
+                font-weight: 900;
+                text-transform: uppercase;
+                height: 60px;
+                width: 80%;
+                max-width: 250px;
+                margin: 20px auto;
+                border: $standard-border;
+                border-color: $form-color;
+                border-radius: $standard-border-radius;
+                opacity: 1 !important;
+                color: $font-color-main;
+                background-color: $form-color;
+
+                &:hover {
+                    @include hoverAnimate;
+                    border-color: white;
+                
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}

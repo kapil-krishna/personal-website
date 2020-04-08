@@ -1,4 +1,5 @@
 import React from 'react';
+import './photoGrid.scss';
 
 const TwoRowPhotoGrid = () => (
     <div className="two-row-grid">

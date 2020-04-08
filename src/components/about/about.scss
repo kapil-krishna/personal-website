@@ -1,0 +1,43 @@
+@import '../general-styling.scss';
+
+.about-section {
+
+    .about-container {
+        @include container;
+
+        @media screen and (min-width: $large-desktop-breakpoint) {
+            flex-flow: row;
+        }
+
+        .about-content {
+           @include content;
+
+            @media screen and (min-width: $large-desktop-breakpoint) {
+                padding: 0px 35px;
+                
+            }
+
+            h2 {
+                margin-top: 0;
+                text-align: center;
+                font-size: 25px;
+                font-style: italic;
+            }
+
+            p {
+                text-align: justify;
+            }
+        }
+    }
+
+    img {
+        border: $standard-border;
+        border-radius: $standard-border-radius;
+        margin: auto;
+        max-width: 260px;
+
+        @media screen and (min-width: $desktop-breakpoint) {
+            margin-top: 0;
+        }
+    }
+}

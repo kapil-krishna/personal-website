@@ -1,0 +1,51 @@
+@import '../../general-styling.scss';
+
+.navbar { 
+    position: sticky;
+    top: 0;
+    overflow: hidden;
+    opacity: 0;
+    visibility: hidden;
+    width: 0%;
+}
+
+.navbar-open {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    width: 100%;
+    height: 1000px;
+    transition: all 0.5s ease-out;
+    background-color: $nav-background-color;
+    padding-top: 100px;
+    text-align: start;
+
+    @media screen and (min-width: $phone-breakpoint) {
+        width: 40%; 
+    }
+
+    @media screen and (min-width: $desktop-breakpoint) {
+        width: 25%;
+    }
+
+    .nav-item {
+        font-size: 25px;
+        font-weight: 600;
+        font-family: $nav-font;
+        text-decoration: none;
+        margin: 0.5em;
+        margin-left: 2em;
+        color: $font-color-main;
+        width: 95px;
+
+        &:hover {
+            transition: $standard-transition;
+            transform: scale(1.05);
+            color: $nav-hover-color;
+        }
+
+        @media screen and (min-width: $desktop-breakpoint) {
+            font-size: 30px;
+        }
+    }
+}

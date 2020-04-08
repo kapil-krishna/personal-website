@@ -1,0 +1,14 @@
+@import '../general-styling.scss';
+
+.home-section {
+    text-transform: uppercase;
+    height: 90vh;
+    text-align: center;
+    margin-top: 10vh;
+    padding-bottom: unset;
+
+    h1 {
+        color: $nav-hover-color;
+        border: none;
+    }
+}

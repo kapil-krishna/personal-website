@@ -1,8 +1,9 @@
 import React from 'react';
-import ReactSVG from '../../images/SVGs/react-2.svg';
-import GatsbySVG from '../../images/SVGs/Gatsby-Monogram.svg';
-import NetlifySVG from '../../images/SVGs/netlify.svg';
-import TwoRowPhotoGrid from '../photoGrid';
+import ReactSVG from '../../../../images/SVGs/react-2.svg';
+import GatsbySVG from '../../../../images/SVGs/Gatsby-Monogram.svg';
+import NetlifySVG from '../../../../images/SVGs/netlify.svg';
+import TwoRowPhotoGrid from '../../../photo-grid/photoGrid';
+import './javaswitch.scss';
 
 const Javaswitch = () => {
     return (
@@ -32,10 +33,7 @@ const Javaswitch = () => {
                     Demo 
                 </a>
             </div>
-            {/* <a className="photoGrid" href="https://javaswitch.netlify.com/" target="_blank"> */}
-                <TwoRowPhotoGrid/>
-            {/* </a> */}
-            
+            <TwoRowPhotoGrid/>
         </div>
     )
 }

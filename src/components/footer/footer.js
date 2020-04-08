@@ -1,7 +1,8 @@
 import React from 'react';
-import LinkedInSVG from '../images/SVGs/iconmonstr-linkedin-4.svg';
-import GitHubSVG from '../images/SVGs/iconmonstr-github-1.svg';
-import EmailSVG from '../images/SVGs/iconmonstr-email-10.svg';
+import LinkedInSVG from '../../images/SVGs/iconmonstr-linkedin-4.svg';
+import GitHubSVG from '../../images/SVGs/iconmonstr-github-1.svg';
+import EmailSVG from '../../images/SVGs/iconmonstr-email-10.svg';
+import './footer.scss';
 
 const Footer = () => {
     return (

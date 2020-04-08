@@ -1,0 +1,41 @@
+@import '../../../general-styling.scss';
+
+.javaswitch-container {
+    @include container;
+
+    @media screen and (min-width: $large-desktop-breakpoint) {
+        flex-flow: row;
+        justify-content: space-around;
+    }
+
+    .left-column {
+        @include content;
+        display: flex;
+        flex-flow: column;
+        text-align: justify;
+    }
+
+    .two-row-grid {
+
+        .images-top-row {
+            background-image: url('../../../../images/javaswitch/main-page.PNG');
+        }
+
+        .images-bottom-row {
+
+            .images-left-column {
+
+                .top-image {
+                    background-image: url('../../../../images/javaswitch/app-form.PNG');
+                }
+                .bottom-image {
+                    background-image: url('../../../../images/javaswitch/modal.PNG');
+                }
+            }
+
+            .images-right-column {
+                background-image: url('../../../../images/javaswitch/mobile-view.PNG');
+            }
+        }
+    }
+}

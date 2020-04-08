@@ -1,0 +1,50 @@
+@import '../../general-styling.scss';
+
+.toggle-button {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    outline: none;
+    background: transparent;
+    border: none;
+    padding: 26px;
+    z-index: 2;
+    cursor: pointer;
+
+    &:hover {
+        .toggle-button-line, 
+        .toggle-button-line-top, 
+        .toggle-button-line-bottom {
+            background: $nav-hover-color;
+        }
+    }
+}
+
+@mixin toggle-button-line {
+    margin: 5px;
+    width: 35px;
+    border-radius: 4px;
+    height: 4px;
+    background: white;
+    transition: $standard-transition;
+    transform-origin: 90% center;
+}
+
+.toggle-button-line {
+    @include toggle-button-line;
+}
+
+.toggle-button-line-top {
+    @include toggle-button-line;
+    transform: rotate(-45deg) scale(1.4);
+}
+
+.toggle-button-line-middle { 
+    @include toggle-button-line;
+    background: transparent;
+}
+
+.toggle-button-line-bottom {
+    @include toggle-button-line;
+    transform: rotate(45deg) scale(1.4);
+}

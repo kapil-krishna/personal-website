@@ -1,0 +1,27 @@
+@import '../general-styling.scss';
+
+footer {
+    min-height: 300px;
+    text-align: center;
+    background-image: linear-gradient($background-color-main, $background-color-1);
+
+    h4 {
+        padding-top: 20px;
+        font-size: 15px;
+    }
+
+    .svgBox {
+       padding-top: 100px;
+       justify-content: space-evenly;
+       max-width: 600px;
+       margin: auto;
+
+       a {
+           width: 60px;
+
+           @media screen and (min-width: $phone-breakpoint) {
+               width: 70px;
+           }
+       }
+    }
+}

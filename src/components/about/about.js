@@ -1,5 +1,6 @@
 import React from 'react';
-import profilePhoto from "../images/about-photo.jpg";
+import profilePhoto from "../../images/about-photo.jpg";
+import "./about.scss";
 
 const About = () => {
     return (

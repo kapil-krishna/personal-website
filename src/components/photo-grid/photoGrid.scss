@@ -1,0 +1,69 @@
+@import '../general-styling.scss';
+
+@mixin imageConstants {
+    border: $standard-border;
+    border-width: 2px;
+    background-position: top;  
+    background-size: cover;
+    box-sizing: border-box;
+}
+
+.two-row-grid {
+    display: flex;
+    flex-flow: column;
+    width: 80vw;
+    max-width: 650px;
+    height: 550px;
+    margin: auto;
+    
+    @media screen and (min-width: $desktop-breakpoint) {
+        padding: 20px;
+    }
+
+    .images-top-row {
+        @include imageConstants;
+        width: 100%;
+        height: 35%;
+        margin-bottom: 10px;
+    }
+    
+    .images-bottom-row {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        height: 65%;
+        
+        .images-left-column {
+            display: flex;
+            flex-flow: column;
+            justify-content: space-between;
+            width: 55%;
+
+            @media screen and (min-width: $phone-breakpoint) {
+                width: 62%;
+            }
+            
+            .top-image {
+                @include imageConstants;
+                height: 48%;
+                width: 100%;
+            }
+
+            .bottom-image {
+                @include imageConstants;
+                height: 48%;
+                width: 100%;
+            }
+        }
+
+        .images-right-column {
+            @include imageConstants;
+            width: 40%;
+            height: 100%;
+
+            @media screen and (min-width: $phone-breakpoint) {
+                width: 36%;
+            }
+        }
+    }
+}

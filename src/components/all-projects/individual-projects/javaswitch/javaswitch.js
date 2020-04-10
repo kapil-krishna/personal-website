@@ -13,7 +13,7 @@ const Javaswitch = () => {
                 <div className="javaswitch-description">
                     <p>As a post-programme assignment after finishing the TechSwitch bootcamp, I was given the task of designing a website for a company that offered software engineering bootcamps. 
                         The website needed to be modern, responsive and modifiable via a CMS. 
-                        To achieve this I combined Gatsby.js, a static-site generator, with Netlify CMS, allowing the site to be editable for non-developers as well as having other features such as image optimisation.</p>
+                        To achieve this I combined Gatsby.js, a static-site generator with features such as image optimisation and pulling data via GraphQL, and Netlify, allowing the site to be editable for non-developers via Netlify CMS.</p>
                 </div>
                 <div className="technologies">
                     <h3>Technologies used</h3>

@@ -7,6 +7,7 @@ $title-font: 'Fredoka One', cursive;
 $banner-font: 'Russo One', sans-serif;
 
 $paragraph-font-sizing: 1.2rem;
+$phone-heading-font-size: 30px;
 
 //colors
 $font-color-main: rgb(255, 255, 255);
@@ -93,12 +94,32 @@ section {
 
 h1 {
     font-family: $nav-font;
-    font-size: 2.5em;
+    font-size: 2.2rem;
     text-align: center;
     padding: 10px 20px;
     width: fit-content;
     margin: 40px auto;
     border-left: $standard-border;
+
+    @media screen and (min-width: $tablet-breakpoint) {
+        font-size: 2.5rem;
+    }
+}
+
+h2 {
+    font-size: 2rem;
+
+    @media screen and (min-width: $tablet-breakpoint) {
+        font-size: 2.2rem;
+    }
+}
+
+h3 {
+    font-size: 1.5rem;
+
+    @media screen and (min-width: $tablet-breakpoint) {
+        font-size: 1.8rem;
+    }
 }
 
 .svgBox {

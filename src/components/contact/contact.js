@@ -7,7 +7,7 @@ const Contact = () => {
         <section className="contact-section" id="contact">
             <h1>CONTACT</h1>
             <div className="contact-container">
-                <h2>Feel free to drop me a line below!</h2>
+                <h3>Feel free to drop me a line below!</h3>
                 <form className="contact-form" name="contact" method="post">
                 <input type="hidden" name="form-name" value="contact" /> 
                     <field>

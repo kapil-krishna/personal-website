@@ -4,11 +4,33 @@
     text-transform: uppercase;
     height: 90vh;
     text-align: center;
-    margin-top: 10vh;
+    // margin-top: 10vh;
     padding-bottom: unset;
+    // background-image: linear-gradient($background-color-3, black);
+    // max-width: unset !important;
+
+    @media screen and (min-width: $desktop-breakpoint) {
+        margin-top: 10vh;
+    }
+
 
     h1 {
-        color: $nav-hover-color;
         border: none;
+    }
+
+    .first-line {
+        font-size: 44px;
+
+        @media screen and (min-width: $desktop-breakpoint) {
+            font-size: 60px;
+        }
+    }
+
+    .second-line {
+        font-size: 30px;
+
+        @media screen and (min-width: $desktop-breakpoint) {
+            font-size: 40px;
+        }
     }
 }

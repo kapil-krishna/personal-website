@@ -34,6 +34,7 @@
         border: $standard-border;
         border-radius: $standard-border-radius;
         margin: auto;
+        width: 80%;
         max-width: 260px;
 
         @media screen and (min-width: $desktop-breakpoint) {

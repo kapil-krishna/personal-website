@@ -18,7 +18,7 @@ const Navbar = ({ toggle, setToggle }) => {
                     to="home"
                     spy={true}
                     smooth={true}
-                    offset={-200}
+                    offset={-300}
                     duration={500}
                     onClick={() => setToggle(!toggle)}
                     >HOME</Link>
@@ -28,6 +28,7 @@ const Navbar = ({ toggle, setToggle }) => {
                     to="about"
                     spy={true}
                     smooth={true}
+                    offset={-40}
                     duration={500}
                     onClick={() => setToggle(!toggle)}
                     >ABOUT</Link>
@@ -37,6 +38,7 @@ const Navbar = ({ toggle, setToggle }) => {
                     to="projects"
                     spy={true}
                     smooth={true}
+                    offset={-30}
                     duration={500}
                     onClick={() => setToggle(!toggle)}
                     >PROJECTS</Link>
@@ -46,6 +48,7 @@ const Navbar = ({ toggle, setToggle }) => {
                     to="contact"
                     spy={true}
                     smooth={true}
+                    offset={-30}
                     duration={500}
                     onClick={() => setToggle(!toggle)}
                     >CONTACT</Link>

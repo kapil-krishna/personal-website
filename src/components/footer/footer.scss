@@ -1,9 +1,8 @@
 @import '../general-styling.scss';
 
 footer {
-    min-height: 220px;
     text-align: center;
-    background-color: $background-color-3;
+    background-color: $background-color-main;
     // margin-top: 40px;
     // background-image: linear-gradient($background-color-main, $background-color-3);
 
@@ -13,7 +12,7 @@ footer {
     }
 
     .svgBox {
-       padding-top: 50px;
+       padding-top: 20px;
        justify-content: space-evenly;
        max-width: 600px;
        margin: auto;

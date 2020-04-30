@@ -23,10 +23,6 @@ footer {
            @media screen and (min-width: $phone-breakpoint) {
                width: 70px;
            }
-
-           img:hover {
-                transform: scale(1.15);
-           }
        }
     }
 }

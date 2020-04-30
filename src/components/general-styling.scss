@@ -10,17 +10,21 @@ $paragraph-font-sizing: 1.2rem;
 $phone-heading-font-size: 30px;
 
 //colors
-$font-color-main: rgb(255, 255, 255);
+$font-color-main: white;
+$section-font-color: white;
 
-$nav-hover-color: rgb(26, 206, 50);
-$nav-background-color: rgb(25, 32, 27);
+$nav-hover-color: rgba(115, 255, 1, 0.945);
+$nav-background-color: rgb(23, 29, 31);
 
-$background-color-main: rgb(0, 0, 0);
-$background-color-1: rgb(42, 148, 16);
-$background-color-2: rgb(25, 56, 16);
-$background-color-3: rgb(31, 32, 39);
+$background-color-main: black;
+$background-color-3: rgb(12, 14, 31);
+$background-color-3-backup: rgb(31, 32, 39);
 
-$demo-button-color: rgb(226, 19, 122);
+$background-about: rgb(53, 36, 36);
+$background-projects: rgb(28, 28, 39);
+$background-contact: rgb(31, 42, 44);
+
+$demo-button-color: rgb(192, 22, 107);
 
 $form-color: rgb(33, 199, 163);
 $form-background-color: rgb(202, 202, 202);
@@ -38,8 +42,9 @@ $standard-border-radius: 3px;
 
 @mixin hoverAnimate {
     &:hover {
-        transform: scale(1.05);
+        transform: scale(1.1);
         transition: all 0.5s ease;
+        cursor: pointer;
     }
 }
 
@@ -56,7 +61,7 @@ $standard-border-radius: 3px;
     justify-content: space-between;
     margin: auto;
     padding: 50px 10px;
-    background-color: $background-color-3;
+    color: $section-font-color;
 
     h3 {
         text-align: center;
@@ -64,7 +69,7 @@ $standard-border-radius: 3px;
 }
 
 body {
-    color: white;
+    color: $font-color-main;
     background-color: $background-color-main;
     font-family: $body-font;
 }
@@ -75,15 +80,15 @@ section {
     max-width: 1600px;
 
     @media screen and (min-width: $phone-breakpoint) {
-        margin: auto 20px;
-    }
-
-    @media screen and (min-width: $tablet-breakpoint) {
         margin: auto 40px;
     }
 
-    @media screen and (min-width: $desktop-breakpoint) {
+    @media screen and (min-width: $tablet-breakpoint) {
         margin: auto 60px;
+    }
+
+    @media screen and (min-width: $desktop-breakpoint) {
+        margin: auto 80px;
     }
 
     @media screen and (min-width: $large-desktop-breakpoint) {
@@ -100,6 +105,7 @@ h1 {
     width: fit-content;
     margin: 40px auto;
     border-left: $standard-border;
+    border-color: $font-color-main;
 
     @media screen and (min-width: $tablet-breakpoint) {
         font-size: 2.5rem;

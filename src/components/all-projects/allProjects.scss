@@ -6,6 +6,10 @@
         text-align: center;
         font-size: 2rem;
     }
+
+    .more-to-come {
+        // margin-bottom: unset;
+    }
 }
 
 .demo-button {
@@ -15,7 +19,7 @@
     width: fit-content;
     margin: 60px auto 40px;
     padding: 10px 80px;
-    color: $font-color-main;
+    color: $section-font-color;
     background-color: $demo-button-color;
     border: $standard-border;
     border-color:  $demo-button-color;

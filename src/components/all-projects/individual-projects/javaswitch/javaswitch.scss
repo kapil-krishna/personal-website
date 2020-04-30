@@ -2,6 +2,7 @@
 
 .javaswitch-container {
     @include container;
+    background-color: $background-projects;
 
     @media screen and (min-width: $large-desktop-breakpoint) {
         flex-flow: row;

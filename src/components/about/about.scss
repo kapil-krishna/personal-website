@@ -1,8 +1,10 @@
 @import '../general-styling.scss';
 
 .about-section {
-
+    
     .about-container {
+        background-color: $background-about;
+        // background-image: linear-gradient($background-about, $background-color-main);
         @include container;
 
         @media screen and (min-width: $large-desktop-breakpoint) {

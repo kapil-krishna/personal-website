@@ -6,6 +6,7 @@
 
     .contact-container {
         @include container;
+        background-color: $background-contact;
 
         h2 {
             text-align: center;
@@ -75,7 +76,7 @@
                 border-color: $form-color;
                 border-radius: $standard-border-radius;
                 opacity: 1 !important;
-                color: $font-color-main;
+                color: $section-font-color;
                 background-color: $form-color;
 
                 &:hover {

@@ -2,13 +2,25 @@
 
 .home-section {
     text-transform: uppercase;
-    height: 80vh;
+    height: 92vh;
     text-align: center;
-    padding-bottom: unset;
+    display: flex;
+    flex-flow: column;
+    margin-top: -20px;
+    padding-top: unset;
+    align-items: center;
 
     @media screen and (min-width: $phone-breakpoint) {
-        margin-top: 10vh;
-        height: 75vh;
+        // height: 85vh;
+    }
+
+    @media screen and (min-width: $tablet-breakpoint) {
+        // height: 75vh;
+    }
+
+    @media screen and (min-height: 736px) {
+        margin-top: -40px;
+        justify-content: center;
     }
 
 
@@ -17,18 +29,47 @@
     }
 
     .first-line {
-        font-size: 44px;
+        font-size: 5vh;
 
-        @media screen and (min-width: $desktop-breakpoint) {
-            font-size: 60px;
+        @media screen and (min-width: $phone-breakpoint) {
+            font-size: 4.7vh;
+        }
+
+        @media screen and (min-width: $tablet-breakpoint) {
+            font-size: 4.3vh;
         }
     }
 
-    .second-line {
-        font-size: 30px;
+    img {
+        width: 200px;
+        height: 200px;
+        border-radius: 200px;
+        object-fit: cover;
+        border: $standard-border;
 
-        @media screen and (min-width: $desktop-breakpoint) {
-            font-size: 40px;
+        @media screen and (min-width: $phone-breakpoint) {
+            width: 300px;
+            height: 300px;
+         }
+
+        @media screen and (min-width: $tablet-breakpoint) {
+           width: 350px;
+           height: 350px;
+           margin: 3vh;
+        }
+
+    }
+
+    .second-line {
+        font-size: 4.5vh;
+
+        
+        @media screen and (min-width: $phone-breakpoint) {
+            font-size: 4vh;
+        }
+
+        @media screen and (min-width: $tablet-breakpoint) {
+            font-size: 3.5vh;
         }
     }
 }

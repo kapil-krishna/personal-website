@@ -29,14 +29,14 @@
     }
 
     .first-line {
-        font-size: 5vh;
+        font-size: 4.8vh;
 
         @media screen and (min-width: $phone-breakpoint) {
-            font-size: 4.7vh;
+            font-size: 4.5vh;
         }
 
         @media screen and (min-width: $tablet-breakpoint) {
-            font-size: 4.3vh;
+            font-size: 4.2vh;
         }
     }
 
@@ -61,15 +61,15 @@
     }
 
     .second-line {
-        font-size: 4.5vh;
+        font-size: 4.3vh;
 
         
         @media screen and (min-width: $phone-breakpoint) {
-            font-size: 4vh;
+            font-size: 3.8vh;
         }
 
         @media screen and (min-width: $tablet-breakpoint) {
-            font-size: 3.5vh;
+            font-size: 3.3vh;
         }
     }
 }

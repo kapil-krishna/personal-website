@@ -2,12 +2,13 @@
 
 .home-section {
     text-transform: uppercase;
-    height: 90vh;
+    height: 80vh;
     text-align: center;
     padding-bottom: unset;
 
-    @media screen and (min-width: $desktop-breakpoint) {
+    @media screen and (min-width: $phone-breakpoint) {
         margin-top: 10vh;
+        height: 75vh;
     }
 
 

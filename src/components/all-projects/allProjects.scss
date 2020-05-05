@@ -14,19 +14,6 @@
 
 .demo-button {
     font-size: 25px;
-    text-decoration: none;
-    text-align: center;
-    width: fit-content;
     margin: 60px auto 40px;
-    padding: 10px 80px;
-    color: $section-font-color;
-    background-color: $demo-button-color;
-    border: $standard-border;
-    border-color:  $demo-button-color;
-    border-radius: $standard-border-radius;
-    @include hoverAnimate;
-
-    &:hover {
-        border: $standard-border;
-    }
+    @include button-formatting($demo-button-color-1, $demo-button-color-2);
 }

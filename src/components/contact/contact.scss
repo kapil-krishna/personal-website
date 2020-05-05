@@ -47,7 +47,7 @@
 
                     &:focus {
                         transition: 0.3s;
-                        box-shadow: 3px 3px $form-color;
+                        box-shadow: 3px 3px $form-color-1;
                         border: $standard-border;
                         background-color: white;
                         
@@ -66,26 +66,9 @@
 
             .submit-button {
                 font-size: $paragraph-font-sizing + 0.3;
-                font-family: $body-font;
-                font-weight: 900;
-                text-transform: uppercase;
-                height: 60px;
-                width: 80%;
-                max-width: 250px;
                 margin: 20px auto;
-                border: $standard-border;
-                border-color: $form-color;
-                border-radius: $standard-border-radius;
-                opacity: 1 !important;
-                color: $section-font-color;
-                background-color: $form-color;
-
-                &:hover {
-                    @include hoverAnimate;
-                    border-color: white;
-                
-                    cursor: pointer;
-                }
+                border: none;
+                @include button-formatting($form-color-1, $form-color-2);
             }
         }
     }

@@ -31,7 +31,7 @@ const Contact = () => {
                             rows="8"
                         />
                     </field>
-                    <input className="submit-button" type="submit" value="send"/>
+                    <input className="submit-button" type="submit" value="Send"/>
                 </form>
             </div>
         </section>

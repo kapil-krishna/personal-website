@@ -11,25 +11,30 @@ const Contact = () => {
                 <form className="contact-form" name="contact" method="post">
                 <input type="hidden" name="form-name" value="contact" /> 
                     <field>
-                        <label>Name</label>
-                        <input 
-                            name="name" 
-                            type="text"
-                        />
+                        <label>Name
+                            <input
+                                label="name" 
+                                name="name" 
+                                type="text"
+                            />
+                        </label>
                     </field>
                     <field>
-                        <label>Email</label>
-                        <input
-                            name="email" 
-                            type="email" 
-                        />
+                        <label>Email
+                            <input
+                                name="email" 
+                                type="email" 
+                            />
+                        </label>
                     </field>
                     <field className="message-input">
-                        <label>Message</label>
-                        <textarea 
-                            name="message" 
-                            rows="8"
-                        />
+                        <label>Message
+                            <textarea 
+                                label="message"
+                                name="message" 
+                                rows="8"
+                            />
+                        </label>
                     </field>
                     <input className="submit-button" type="submit" value="Send"/>
                 </form>

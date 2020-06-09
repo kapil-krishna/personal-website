@@ -18,18 +18,18 @@ const Javaswitch = () => {
                 <div className="technologies">
                     <h3>Technologies used</h3>
                     <div className="svgBox">
-                        <a href="https://reactjs.org/" target="_blank">
-                            <img src={ReactSVG}/>
+                        <a href="https://reactjs.org/" target="_blank" rel="noopener noreferrer">
+                            <img src={ReactSVG} alt="react-logo"/>
                         </a>
-                        <a href="https://www.gatsbyjs.org/" target="_blank">
-                            <img src={GatsbySVG}/>
+                        <a href="https://www.gatsbyjs.org/" target="_blank" rel="noopener noreferrer">
+                            <img src={GatsbySVG} alt="gatsby-logo"/>
                         </a>
-                        <a href="https://www.netlify.com/" target="_blank">
-                            <img src={NetlifySVG}/>
+                        <a href="https://www.netlify.com/" target="_blank" rel="noopener noreferrer">
+                            <img src={NetlifySVG} alt="netlify-logo"/>
                         </a>
                     </div>
                 </div>
-                <a className="demo-button" href="https://javaswitch.netlify.com/" target="_blank">
+                <a className="demo-button" href="https://javaswitch.netlify.com/" target="_blank" rel="noopener noreferrer">
                     Demo 
                 </a>
             </div>

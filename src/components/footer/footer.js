@@ -8,14 +8,14 @@ const Footer = () => {
     return (
         <footer>
             <div className="svgBox">
-                <a href="https://www.linkedin.com/in/kapil-krishna-profile/" target="_blank">
-                    <img src={LinkedInSVG}/>
+                <a href="https://www.linkedin.com/in/kapil-krishna-profile/" target="_blank" rel="noopener noreferrer">
+                    <img src={LinkedInSVG} alt="linkedin-logo"/>
                 </a>
-                <a href="https://github.com/kapil-krishna" target="_blank">
-                    <img src={GitHubSVG}/>
+                <a href="https://github.com/kapil-krishna" target="_blank" rel="noopener noreferrer">
+                    <img src={GitHubSVG} alt="github-logo"/>
                 </a>
-                <a href="mailto:kapil.krishna.yo@gmail.com" target="_blank">
-                    <img src={EmailSVG}/>
+                <a href="mailto:kapil.krishna.yo@gmail.com" target="_blank" rel="noopener noreferrer">
+                    <img src={EmailSVG} alt="email-logo"/>
                 </a>
             </div>
             <h4 className="copyright">

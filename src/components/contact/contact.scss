@@ -35,6 +35,11 @@
                 text-align: left;
                 margin-bottom: 10px;
 
+                label {
+                    display: flex;
+                    flex-flow: column;
+                }
+
                 
                 input, textarea {
                     font-size: $paragraph-font-sizing;

@@ -1,8 +1,15 @@
 @import '../general-styling.scss';
 
+@mixin opening-animation($length-of-delay) {
+    animation-name: fade-in;
+    animation-delay: $length-of-delay;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
 .home-section {
     text-transform: uppercase;
-    height: 92vh;
+    height: 94vh;
     text-align: center;
     display: flex;
     flex-flow: column;
@@ -11,7 +18,7 @@
     align-items: center;
 
     @media screen and (min-height: 736px) {
-        margin-top: -40px;
+        margin-top: -60px;
         justify-content: center;
     }
 
@@ -19,21 +26,72 @@
         margin-top: -50px;
     }
 
+ 
 
-    h1 {
+    .first-line {
         border: none;
+        // opacity: 0;
+
+        @media screen and (min-width: $tablet-breakpoint) {
+            font-size: 5.3vh;
+        }
+
+        .hey-there {
+            @include opening-animation(2s);
+            opacity: 0;
+        }
+
+        .im-kapil {
+            @include opening-animation(4s);
+            opacity: 0;
+        }
     }
 
-    h2 {
+    .second-line {
+        @include opening-animation(9s);
         font-family: $nav-font;
+        opacity: 0;
+
+        @media screen and (min-width: $tablet-breakpoint) {
+            font-size: 4.4vh;
+        }
+    }
+
+    @keyframes fade-in {
+        0% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
+        }
+    }
+
+    @keyframes fade-in-with-scale {
+        0% {
+            opacity: 0;
+        }
+
+        40% {
+            transform: scale(1.15);
+        }
+
+        100% {
+            opacity: 1;
+        }
     }
 
     img {
-        width: 200px;
-        height: 200px;
-        border-radius: 200px;
-        object-fit: cover;
+        @include opening-animation(6s);
+        animation-name: fade-in-with-scale;
+
         border: $standard-border;
+        border-radius: 200px;
+        height: 200px;
+        object-fit: cover;
+        opacity: 0;
+        width: 200px;
+        
 
         @media screen and (min-width: $phone-breakpoint) {
             width: 300px;
